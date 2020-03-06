@@ -1,0 +1,29 @@
+
+
+
+h3 {
+  color: white;
+  background-color: deepskyblue;
+  text-align: center;
+  padding: 42px;
+  font-size: 25px;
+}
+
+.buttons {
+  text-align: center;
+  padding-top: 200px;
+
+}
+
+.button1 {
+  color : white;
+  margin-right: 90px;
+  background: purple;
+
+}
+
+.button2 {
+  color : white;
+  background: plum;
+
+}
