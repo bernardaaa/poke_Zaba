@@ -1,39 +1,67 @@
-<p>version1 works!</p>
+<div class="PokemonDetailsModel">
 
-<button mat-raised-button (click)="onTest1BtnClick()"> Test 1 </button>
+  <div class="inputs">
+
+    <mat-form-field class="input1">
+      <mat-label> Name</mat-label>
+      <input matInput [(ngModel)]="name"
+             id="name"
+             (ngModelChange)="ToLowerCase($event)">
+    </mat-form-field>
+
+    <mat-form-field class="input2">
+      <mat-label> Type</mat-label>
+      <input matInput [(ngModel)]="type"
+             id="name"
+             (ngModelChange)="ChangeToLowerCase($event)">
+    </mat-form-field>
+
+    <button class="searchButton" mat-raised-button (click)="onSearchClick()"> Pretraži</button>
+
+  </div>
+
+</div>
 
 
+<div class="PokemonDetailsModel">
+  <table mat-table [dataSource]="dataSource">
 
-<table mat-table [dataSource]="dataSource" class="PokemonDetailsModel">
-
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let detail"> {{detail.name}} </td>
-  </ng-container>
-
-
-  <ng-container matColumnDef="type">
-    <th mat-header-cell *matHeaderCellDef> Type </th>
-    <td mat-cell *matCellDef="let detail"> {{detail.type}} </td>
-  </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name</th>
+      <td mat-cell *matCellDef="let detail"> {{detail.name}} </td>
+    </ng-container>
 
 
-  <ng-container matColumnDef="heightweight">     ///////
-    <th mat-header-cell *matHeaderCellDef> Height/Weight </th>
-    <td mat-cell *matCellDef="let detail"> {{detail.height}} /  {{detail.weight}} </td>
-  </ng-container>
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Type</th>
+      <td mat-cell *matCellDef="let detail"> {{detail.type}} </td>
+    </ng-container>
 
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="signatureAbility">    //////
-    <th mat-header-cell *matHeaderCellDef> Signature ability </th>
-    <td mat-cell *matCellDef="let detail"> {{detail.signatureAbility}} </td>
-  </ng-container>
 
-  <ng-container matColumnDef="baseExperience">
-    <th mat-header-cell *matHeaderCellDef> Base experience </th>
-    <td mat-cell *matCellDef="let detail"> {{detail.baseExperience}} </td>
-  </ng-container>
+    <ng-container matColumnDef="heightweight"> ///////
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Height/Weight</th>
+      <td mat-cell *matCellDef="let detail"> {{detail.height}} /  {{detail.weight}} </td>
+    </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="signatureAbility"> //////
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Signature ability</th>
+      <td mat-cell *matCellDef="let detail"> {{detail.signatureAbility}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="baseExperience">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Base experience</th>
+      <td mat-cell *matCellDef="let detail"> {{detail.baseExperience}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" (page)="pageEvent = $event"
+                 showFirstLastButtons></mat-paginator>
+
+</div>
+
+<button mat-raised-button (click)="onTest1BtnClick()"> Test 1</button>
+

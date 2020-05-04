@@ -12,13 +12,13 @@ export class HomepageComponent  {
   constructor(private router: Router, private route: ActivatedRoute) {
   }
 
-  onVersion1BtnClick(): void {
-    console.log(this.route);
-    this.router.navigate(['/version1']);
+     onVersion1BtnClick(): void {
+      console.log(this.route);
+       this.router.navigate(['/version1']);
 
-  }
+   }
 
-  onVersion2BtnClick(): void {
-    this.router.navigate(['/version2']);
-  }
+   onVersion2BtnClick(): void {
+     this.router.navigate(['/version2']);
+   }
 }

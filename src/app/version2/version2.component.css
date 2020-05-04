@@ -1,0 +1,49 @@
+table {
+  text-align: center;
+  width: 100%;
+  margin-left: 500px;
+}
+
+.mat-header-cell {
+  text-align: center;
+}
+
+.PokemonDetailsModel {
+  width: 40%;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  padding-left: 3px 88px;
+  display: list-item;
+}
+
+.PokemonDetailsModel td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  background-color: white;
+  color: black;
+  margin: 0;
+}
+
+.PokemonDetailsModel th {
+  border: 1px solid #ddd;
+  padding: 6px;
+  color: black;
+  background-color: dodgerblue;
+  margin: 0;
+}
+
+.paginator {
+  width: 100%;
+  text-align: center;
+  margin-left: 430px;
+}
+
+.input {
+  text-align: center;
+  font-size: 15px;
+  padding: 0px 30px;
+  margin-left: 10px;
+}
+
+
+

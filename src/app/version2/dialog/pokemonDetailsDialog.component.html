@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Pokemon details: {{this.pokemonName}} </h1>
+<div mat-dialog-content style="min-height: 600px;">
+  <div class="details1">
+    <h2 mat-dialog-title>Type: {{this.pokemonType}}</h2>
+    <h2 mat-dialog-title>Weight: {{this.pokemonWeight}}</h2>
+    <h2 mat-dialog-title>Height: {{this.pokemonHeight}}</h2>
+    <h2 mat-dialog-title>Signature ability: {{this.signatureAbility}}</h2>
+  </div>
+
+  <div class="details2">
+    <h2 mat-dialog-title>Double Damage From: {{this.doubleDamageFrom}}</h2>
+    <h2 mat-dialog-title>Double Damage To: {{this.doubleDamageTo}}</h2>
+    <h2 mat-dialog-title>Half Damage From: {{this.halfDamageFrom}}</h2>
+    <h2 mat-dialog-title>Half Damage To: {{this.halfDamageTo}}</h2>
+    <h2 mat-dialog-title>No Damage From: {{this.noDamageFrom}}</h2>
+    <h2 mat-dialog-title>No Damage To: {{this.noDamageTo}}</h2>
+  </div>
+
+<div mat-dialog-actions class="button">
+  <button mat-raised-button color="primary" (click)="close()"> ZATVORI</button>
+</div>
+
+  </div>
+
+
+

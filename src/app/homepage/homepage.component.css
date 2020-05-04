@@ -1,29 +1,44 @@
 
 
-
 h3 {
-  color: white;
-  background-color: deepskyblue;
+background-color: blue;
+  color: yellow;
+font-style: oblique;
   text-align: center;
-  padding: 42px;
-  font-size: 25px;
+  padding: 10px;
+  font-size: 50px;
+  margin-top: 0px;
 }
+
+.backgoroundPokemon {
+  background-image: url("pokemon-tower-battle.png") ;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 
 .buttons {
   text-align: center;
   padding-top: 200px;
 
+
 }
 
 .button1 {
-  color : white;
+  color : yellow;
+  font-style: oblique;
   margin-right: 90px;
-  background: purple;
+  background: mediumblue;
+  font-size: 30px;
+  padding: 30px 40px;
 
 }
 
 .button2 {
-  color : white;
-  background: plum;
-
+  color : yellow;
+  font-style: oblique;
+  background: darkblue;
+  font-size: 30px;
+  padding: 30px 40px;
 }

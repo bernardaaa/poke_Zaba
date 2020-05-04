@@ -3,7 +3,6 @@ export class PokemonDetailsModel {
   height: string;
   weight: string;
   baseExperience: string;
-  type: string = '';
-  signatureAbility: string = '';
-
+  type = '';
+  signatureAbility = '';
 }

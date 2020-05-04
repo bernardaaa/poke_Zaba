@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -6,16 +7,30 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ServicepokemoniService {
 
-  url = 'https://pokeapi.co/api/v2/pokemon';
-
+  url = 'https://pokeapi.co/api/v2/pokemon/';
+  urlGetByType = 'https://pokeapi.co/api/v2/type/';
 
   constructor(private http: HttpClient) { }
 
-  getPokemons(){
-    return this.http.get(this.url);
+  getPokemons(offset: number, limit: number) {
+    return this.http.get(this.url + '?offset=' + offset + '&limit=' + limit);
   }
 
-  getPokemonDetails(urlDetails: string){
-    return this.http.get(urlDetails); //dohvati prvih 20 pokemona, for each petlja
+  getPokemonDetails(urlDetails: string) {
+    return this.http.get(urlDetails);
   }
+
+  getPokemonByName(name: string) {
+    //console.log('Servis getPokemonByName url za poziv ', this.url + name);
+    return this.http.get(this.url + name);
+  }
+
+  getPokemonByType(type: string) {
+    return this.http.get(this.urlGetByType + type);
+  }
+
+  getPokemonByDamage(urlDamage: string) {
+   return this.http.get( urlDamage);
+  }
+
 }

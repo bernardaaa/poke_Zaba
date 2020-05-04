@@ -1,0 +1,62 @@
+.PokemonDetailsModel {
+  width: 61%;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  padding-left: 3px 88px;
+  display: list-item;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+  margin-left: 290px;
+}
+
+.PokemonDetailsModel td {
+   border: 1px solid #ddd;
+   padding: 8px;
+   background-color: white;
+   color: black;
+ }
+
+.PokemonDetailsModel th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: black;
+  background-color: dodgerblue;
+}
+
+
+.inputs {
+   text-align: center;
+  display: flex;
+  width: 100%;
+  margin-left: 50%;
+}
+
+.input1 {
+
+  font-size: 24px;
+  padding: 10px 10px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.input2 {
+  font-size: 24px;
+  padding: 10px 10px;
+  margin-right: 120px;
+  margin-top: 5px;
+}
+
+.searchButton {
+  color: black;
+  background: dodgerblue;
+  font-size: medium;
+  text-align: center;
+  padding-left: 4px;
+  margin-left: -80px;
+  height: 50px;
+  margin-top: 29px;
+}
+
